@@ -1,0 +1,47 @@
+@import "bootstrap.less";
+
+/*
+Variables!
+*/
+@primary_color: green;
+
+body {
+  padding-top: 60px;
+}
+
+h2, h4{
+color: #999;
+}
+
+
+.hero-unit{
+background-color: #000;
+}
+
+
+
+/*
+Mix-ins are like functions for commonly used operations,
+such as apply borders. We create variables by prepending
+the @ symbol.
+*/
+.rounded(@radius: 5px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+
+#container {
+/* References the variable we created above. */
+	width: 200px;
+	height: 200px;
+	background: @primary_color;
+
+/* Calls the .rounded mix-in (function) that we created, and overrides the default value. */
+	.rounded(20px); 
+
+/* Nested selectors inherit their parent's selector as well. This allows for shorter code. */
+	a {
+		color: red;
+	}
+}

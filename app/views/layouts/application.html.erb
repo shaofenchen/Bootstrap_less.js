@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LessApp</title>
+  <%= csrf_meta_tags %>
+<meta charset="utf-8">
+<title>LESS</title>
+<%= stylesheet_link_tag "style.less", :rel => "stylesheet/less" %>
+ <%= javascript_include_tag "application" %>
+
+</head>
+
+
+
+<body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">Overview</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript plugins</a>
+              </li>
+              <li class="">
+                <a href="./less.html">Using LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">Customize</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Examples</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class = "container">
+<div class ="hero-unit">
+
+<div class = "spcan4">
+<h2>A Less.js in Rails example</h2>
+<h4>app/assets/style.less.css</h4>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+<ol class="linenums">
+<li class="L1"><span class="pln">@import "bootstrap.less";</span></li>
+<li class="L2"><span class="pln">.hero-unit{ background-color: #000; } </span></li>
+<li class="L3"><span class="pln">h2,p{ color: #999; }</span></li>
+</ol>
+</pre>
+</div>
+</div>
+<%= yield %>
+</div>
+</body>
+</html>
