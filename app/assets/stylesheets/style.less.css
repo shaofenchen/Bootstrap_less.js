@@ -4,6 +4,7 @@
 Variables!
 */
 @primary_color: green;
+@linkColor: red;
 
 body {
   padding-top: 60px;

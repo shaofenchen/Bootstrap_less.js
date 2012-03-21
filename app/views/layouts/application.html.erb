@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <title>LessApp</title>
-<%= stylesheet_link_tag    "application" , :media => "all" %>
-  <%= csrf_meta_tags %>
-<meta charset="utf-8">
-<title>LESS</title>
 <%= stylesheet_link_tag "style.less", :rel => "stylesheet/less" %>
- <%= javascript_include_tag "application" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+<meta charset="utf-8">
+
 
 </head>
 
@@ -58,19 +57,24 @@
 <div class = "container">
 <div class ="hero-unit">
 
-<div class = "spcan4">
+<div>
 <h2>A Less.js in Rails example</h2>
 <h4>app/assets/style.less.css</h4>
 <pre class="prettyprint linenums" style="margin-bottom: 9px;">
 <ol class="linenums">
 <li class="L1"><span class="pln">@import "bootstrap.less";</span></li>
-<li class="L2"><span class="pln">.hero-unit{ background-color: #000; } </span></li>
-<li class="L3"><span class="pln">h2,p{ color: #999; }</span></li>
+<li class="L2"><span class="pln">@linkColor = red;</span></li>
+<li class="L3"><span class="pln">.hero-unit{ background-color: #000; } </span></li>
+<li class="L4"><span class="pln">h2,p{ color: red; }</span></li>
 </ol>
 </pre>
+</div>
+<div>
+<a href = "#" class ="btn btn-primary">A red color button</a>
 </div>
 </div>
 <%= yield %>
 </div>
 </body>
+
 </html>
